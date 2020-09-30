@@ -6,7 +6,18 @@ Krishyojana is a web-app providing easy access to the necessary details about th
 
 **Organised by:** IEEE CIS Chapter, G H Raisoni College of Engineering, Nagpur
 
-**Topic:** Portal of Government Schemes(Common Platform for all farmers to get information about No. of Schemes availed by farmers)
+**Team Name :** *The N-bots*
+
+**Team Members :**
+
+> [Nirali Sahoo](https://github.com/nizz_009)
+
+> [Neha Jha](https://github.com/njha07)
+
+
+**Problem Statement Code:** A-02
+
+**Problem Statement:** Portal of Government Schemes(Common Platform for all farmers to get information about No. of Schemes availed by farmers)
 
 ### Description:
 
@@ -24,13 +35,7 @@ The technologies used in the project are:
 -	Javascript
 -	Django Framework
 
-**Team Name :** *The N-bots*
 
-**Team Members :**
-
-> [Neha Jha](https://github.com/njha07)
-
-> [Nirali Sahoo](https://github.com/nizz_009)
 
 ##  :) _write smthng_
 
