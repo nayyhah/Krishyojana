@@ -19,10 +19,10 @@ Krishyojana is a web-app providing easy access to the necessary details about th
 
 ### Tech Stack:
 The technologies used in the project are:
-1.	HTML
-2.	CSS
-3.	Javascript
-4.	Django Framework
+-	HTML
+-	CSS
+-	Javascript
+-	Django Framework
 
 **Team Name :** *The N-bots*
 
