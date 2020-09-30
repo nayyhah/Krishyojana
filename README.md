@@ -10,7 +10,7 @@ Krishyojana is a web-app providing easy access to the necessary details about th
 
 **Team Members :**
 
-> [Nirali Sahoo](https://github.com/nizz_009)
+> [Nirali Sahoo](https://github.com/nizz009)
 
 > [Neha Jha](https://github.com/njha07)
 
