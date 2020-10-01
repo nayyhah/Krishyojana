@@ -92,9 +92,52 @@ Home
 }
 
 
+/*
+====================
+MSP Table
+====================
+*/
+.msp-content{
+    padding: 70px 60px 60px 60px;
+    background-image: url("../Images/bg7.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.msp-content h2{
+    font-size: 34px;
+    color: rgb(0, 26, 0);  
+}
+.msp-content h3{
+    font-family: Goudy Bookletter 1911, sans-serif;
+    font-size: 23px;
+    color:  rgb(4, 58, 4);
+    font-style: italic;
+}
+.msp-content p{
+    padding: 0px 2px 5px 8px ; 
+    color: rgb(23, 41, 23);
+    font-style: italic;
+    
+}
+
+.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    border: 1px solid rgb(144, 204, 144); 
+}
+.tab{
+    background:rgb(216, 252, 216);
+    border-color: red;
+}
+.c {
+    text-align: center !important;
+}
+
+
+
 
 /*mobile view*/
 @media(max-width:763px) {
+    /*Home Page*/
     .Logo .TeamName{
      font-size: 24px;
     }
@@ -111,6 +154,19 @@ Home
     .Logo .TeamName{
         font-size: 24px;
     }
+    /*MSP*/
+    .msp-content{
+        padding: 25px 20px 60px 20px;
+    }
+    .msp-content h2{
+        font-size: 28px;
+    }
+    .msp-content h3{
+        font-size: 20.5px;
+    }
+    .t-c {
+        text-align: center !important;
+    }
 }
 
 @media only screen and (min-width: 992px) {
@@ -121,6 +177,19 @@ Home
     }
     .home-content .card img{
         height: 150px;
+    }
+    /*MSP*/
+    .msp-content {
+        padding: 70px 130px 60px 130px;
+    }
+    .msp-content p{
+        text-align: center;
+        font-size: 18px;
+        padding-bottom: 22px;
+    }
+    .msp-content h2{
+        padding-bottom: 15px;
+        font-size: 38px;
     }
 }
 
