@@ -63,7 +63,7 @@ Home
 .home-content .card{
     
     box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    transition: 0.2s;
 
 }
 .home-content .card:hover {
@@ -133,6 +133,80 @@ MSP Table
 }
 
 
+/*
+====================
+Schemes
+====================
+*/
+.schemes-content{
+    padding: 60px 50px 50px 80px;
+    background-image: url("../Images/a5.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.schemes-content h2{
+    font-size: 42px;
+    margin: 0px 0px 30px 0px;
+    text-align: center;
+    color: rgb(252, 246, 246);
+
+}
+.schemes-content .card{
+    width:70%;
+    margin: auto;
+}
+.schemes-content .card-body h5{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(2, 48, 2);
+    margin: 0 0 10px;
+    padding: 0;
+
+}
+.schemes-content .card-body p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #838383;
+    margin: 0 0 10px;
+}
+
+.schemes-content .card-body a{
+    font-size: 14px;
+    color: rgb(10, 206, 10);
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 2px solid rgb(10, 206, 10);
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.schemes-content .card-body .arrow {
+  border: solid rgb(10, 206, 10);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2.2px;
+  margin-bottom: 1px;
+}
+
+.schemes-content .card-body .right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.schemes-content .card-body .arrow:hover {
+    color:  rgb(3, 109, 3);
+    border-color:  rgb(3, 109, 3);
+}
+.schemes-content .card-body a:hover{
+    color:  rgb(3, 109, 3);
+    border-color:  rgb(3, 109, 3);
+}
+
+
+
 
 
 /*mobile view*/
@@ -166,6 +240,21 @@ MSP Table
     }
     .t-c {
         text-align: center !important;
+    }
+    /*Schemes Page*/
+    .schemes-content{
+        padding: 0px 0px 0px 0px;
+        background-image: url("../Images/b2.jpg");
+    }  
+    .schemes-content .card{
+        width:90%;
+    }
+    .schemes-content h2{
+        text-align: center;
+        color: #ffffff;
+        padding-top: 20px;
+        margin-bottom: 20px;
+        font-size: 32px;
     }
 }
 
