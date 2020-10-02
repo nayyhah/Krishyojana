@@ -292,6 +292,7 @@ h2{
     .schemes-content h2{
         text-align: center;
         font-weight: 600;
+	color: rgb(241, 238, 238);
         padding-top: 20px;
         margin-bottom: 20px;
         font-size: 32px;
