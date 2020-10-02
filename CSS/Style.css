@@ -212,38 +212,38 @@ Loan Calculator
 ====================
 */
 
-h2{
+.LoanCalculator h2{
     padding-top: 30px;
     font-size: 35px;
     text-align: center;
 }
 
 @media(min-width:768px) {
-  .center{
+  .LoanCalculator .center{
     margin: 1.5% 30%;
   }
 }
-#loan-info{
+.LoanCalculator #loan-info{
 	display: none;
 	margin: 20px auto;
 }
-#table-header{
+.LoanCalculator #table-header{
     text-align: left;
     overflow: auto;
     display: none;
     border-bottom: 1px solid #ccc;
     margin-bottom: 1px;
 }
-#table{
+.LoanCalculator #table{
     text-align: center;
     max-height: 50vh;
     overflow: auto;
     display: none;
 }
-#info-table {
+.LoanCalculator #info-table {
 	display: none;
 }
-.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+.LoanCalculator .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
    background-color: #B7FEED;
 }
 
