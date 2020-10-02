@@ -6,6 +6,20 @@ function startOver() {
 
 	document.getElementById("loan-info").innerHTML="";
 	document.getElementById("table").innerHTML="";
+
+	if (matchMedia("(min-width: 768px)").matches){
+			document.getElementById("form").classList.add('center');
+			document.getElementById("form").classList.remove('col-md-8');
+	}
+
+	li = document.getElementById("loan-info");
+	ta = document.getElementById("table");
+	tain = document.getElementById("info-table");
+	th = document.getElementById("table-header");
+	li.style.display = "none";
+	ta.style.display = "none";
+	th.style.display = "none";
+	tain.style.display = "none";
 }
 
 function validate() {
@@ -13,6 +27,18 @@ function validate() {
 	var months = document.loan_form.months.value;
 	var rate = document.loan_form.rate.value;
 	var extra = document.loan_form.extra.value;
+
+	document.getElementById("loan-details").classList.add('col-md-4');
+	document.getElementById("form").classList.remove('center');
+	document.getElementById("form").classList.add('col-md-8');
+	li = document.getElementById("loan-info");
+	ta = document.getElementById("table");
+	tain = document.getElementById("info-table");
+	th = document.getElementById("table-header");
+	li.style.display = "inline-block";
+	ta.style.display = "block";
+	th.style.display = "block";
+	tain.style.display = "block";
 
 	//sNaN(Number(loan_amt)) checks to see is user enters a float
 	if (loan_amt <= 0 || isNaN(Number(loan_amt))) {
@@ -73,7 +99,7 @@ function calculate(loan_amt, months, rate, extra) {
 
 	var table="";
 
-	table += "<table>";
+	table += "<table class='table table-striped table-responsive-sm'>";
 
 	table += "<tr>";
 		table += "<td>0</td>";
