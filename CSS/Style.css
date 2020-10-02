@@ -1,6 +1,29 @@
 @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 /*
 ====================
+Basic Layout
+====================
+*/
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+ul {
+  margin: 0;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin: auto auto;
+  margin-top: 2rem;
+}
+
+
+/*
+====================
 Navbar
 ====================
 */
@@ -251,9 +274,15 @@ Loan Calculator
 
 /*mobile view*/
 @media(max-width:763px) {
+    .content-section {
+        /*prevent it from adding a white space between carousel and container elements*/
+        height:auto
+        width: 60%;
+        align-self : center;
+    }    
     /*Home Page*/
     .Logo .TeamName{
-     font-size: 24px;
+        font-size: 24px;
     }
     .navbar-brand {
         font-size: 17px;
