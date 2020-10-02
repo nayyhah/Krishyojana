@@ -235,10 +235,27 @@ Loan Calculator
 ====================
 */
 
+.LoanCalculator{
+    padding: 12px 60px 101px 60px;
+    background-image: url("../Images/ln2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 .LoanCalculator h2{
     padding-top: 30px;
-    font-size: 35px;
+    font-size: 40px;
     text-align: center;
+}
+.LoanCalculator h2 i{
+    font-size: 35px;
+    padding: 0px 2px 0px 0px; 
+    top: -10px;
+}
+.LoanCalculator .content-section{
+    background-color: rgba(250, 250, 250, 0.938);
+    font-size: 16.5px;
 }
 
 @media(min-width:768px) {
@@ -247,8 +264,8 @@ Loan Calculator
   }
 }
 .LoanCalculator #loan-info{
-	display: none;
-	margin: 20px auto;
+    display: none;
+    margin: 20px auto;
 }
 .LoanCalculator #table-header{
     text-align: left;
@@ -264,7 +281,7 @@ Loan Calculator
     display: none;
 }
 .LoanCalculator #info-table {
-	display: none;
+    display: none;
 }
 .LoanCalculator .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
    background-color: #B7FEED;
@@ -325,6 +342,20 @@ Loan Calculator
         padding-top: 20px;
         margin-bottom: 20px;
         font-size: 32px;
+    }
+    /*Loan Calculator*/
+    .LoanCalculator{
+        padding: 0px 1px 50px 1px;
+    }
+    .LoanCalculator h2{
+        padding-top: 25px;
+        font-size: 35px;
+    }
+    .LoanCalculator h2 i{
+        font-size: 30px;
+    }
+    .LoanCalculator .content-section{
+       font-size: 15px;
     }
 }
 
