@@ -140,7 +140,7 @@ Schemes
 */
 .schemes-content{
     padding: 60px 50px 50px 80px;
-    background-image: url("../Images/k1.jpg");
+    background-image: url("../Images/b3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -284,14 +284,14 @@ h2{
     /*Schemes Page*/
     .schemes-content{
         padding: 0px 0px 0px 0px;
-        background-image: url("../Images/k1.jpg");
+        background-image: url("../Images/b2.jpg");
     }  
     .schemes-content .card{
         width:90%;
     }
     .schemes-content h2{
         text-align: center;
-        color: #ffffff;
+        font-weight: 600;
         padding-top: 20px;
         margin-bottom: 20px;
         font-size: 32px;
