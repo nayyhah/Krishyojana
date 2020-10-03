@@ -231,6 +231,43 @@ Schemes
 
 /*
 ====================
+E-market
+====================
+*/
+.name {
+  color: #444444;
+  font-weight: 600;
+  font-size: 25px;
+}
+.account-img-small {
+  height: 40px;
+  width: 40px;
+  margin-right: 20px;
+  margin-bottom: 3px;
+}
+
+#cart {
+  color: #fff;
+}
+#message {
+  background-color: rgba(0,0,0,0.4);
+  text-align: center;
+  padding: 10px;
+  font-size: 17px;
+  color: #eee;
+}
+
+input, button{ 
+  border:none; 
+  background-color: rgba(0, 0, 0, 0);
+  color: #eee;
+  text-decoration: underline;
+  margin-left: 20px;
+} 
+
+
+/*
+====================
 Loan Calculator
 ====================
 */
