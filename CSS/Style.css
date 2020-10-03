@@ -227,7 +227,28 @@ Schemes
     color:  rgb(3, 109, 3);
     border-color:  rgb(3, 109, 3);
 }
+/*
+====================
+Scheme Detail Page
+====================
+*/
+#sc-container {
+    /*for fixed footer*/
+    min-height: 92.8%;
+    background-image: url("../Images/c1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.scheme-content{
+    padding:2% 10% 0% 10%;
 
+}
+
+.scheme-content .text .sub-h{
+    font-size: 17px;
+}
 
 /*
 ====================
@@ -384,6 +405,18 @@ Loan Calculator
         margin-bottom: 20px;
         font-size: 32px;
     }
+    /*Scheme Detail Page*/
+    .scheme-content{
+        padding:4% 5% 0% 5%;
+    }
+    .scheme-content .text h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    .scheme-content .text .sub-h{
+        font-size: 15px;
+    }
+
     /*Loan Calculator*/
     .LoanCalculator{
         padding: 0px 1px 50px 1px;
