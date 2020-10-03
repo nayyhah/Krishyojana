@@ -234,22 +234,22 @@ Schemes
 E-market
 ====================
 */
-.Em-content .name {
+.name {
   color: #444444;
   font-weight: 600;
   font-size: 25px;
 }
-.Em-content .account-img-small {
+.account-img-small {
   height: 40px;
   width: 40px;
   margin-right: 20px;
   margin-bottom: 3px;
 }
 
-.Em-content #cart {
+#cart {
   color: #fff;
 }
-.Em-content #message {
+#message {
   background-color: rgba(0,0,0,0.4);
   text-align: center;
   padding: 10px;
@@ -257,7 +257,7 @@ E-market
   color: #eee;
 }
 
-.Em-content input, button{ 
+input, button{ 
   border:none; 
   background-color: rgba(0, 0, 0, 0);
   color: #eee;
