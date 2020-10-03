@@ -304,7 +304,7 @@ Loan Calculator
     .navbar-brand {
         font-size: 17px;
     }
-    .btn {
+    #navbar .btn {
     width: 86px;
     }
     .carousel .carousel-inner {
