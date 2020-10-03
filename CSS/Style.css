@@ -245,9 +245,15 @@ Scheme Detail Page
     padding:2% 10% 0% 10%;
 
 }
-
 .scheme-content .text .sub-h{
     font-size: 17px;
+}
+.typewriter{
+  white-space: nowrap;
+  overflow: hidden; 
+  font-family: 'Source Code Pro', monospace;
+  color: rgba(255,255,255,.70);
+  animation: animated-text 2s steps(30,end) 1s 1 normal both;
 }
 
 /*
