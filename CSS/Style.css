@@ -54,7 +54,6 @@ body{
 }
 /*Login/Register Button*/
 #navbar .btn {
-    width: 86px;
     height: 37px;
     font-size: 18px;
     box-sizing: border-box;
