@@ -1,4 +1,5 @@
 @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Rubik:ital,wght@0,500;1,600&family=Shadows+Into+Light&family=Noto+Sans&family=Poppins:wght@400;500;600;700;800;900&display=swap&family=Roboto&display=swap" rel="stylesheet");
 /*
 ====================
 Basic Layout
@@ -27,6 +28,9 @@ ul {
 Navbar
 ====================
 */
+html,body{
+    height: 100%;
+}
 body{
     margin: 0px;
 }
@@ -227,7 +231,63 @@ Schemes
     color:  rgb(3, 109, 3);
     border-color:  rgb(3, 109, 3);
 }
+/*
+====================
+Scheme Detail Page
+====================
+*/
+#sc-container {
+    /*for fixed footer*/
+    min-height: 92.8%;
+    background-image: url("../Images/a.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.scheme-content{
+    padding:3% 10% 0% 12%;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+}
+.scheme-content .text .arrow {
+  border: solid rgb(3, 95, 3);
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 5.5px;
+  margin-bottom: 4px;
+}
+.scheme-content .text .right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.scheme-content .text h2{
+    padding-bottom: 10px;
+    color: rgb(20, 19, 19);
+    font-weight: 500;
+}
+.scheme-content .text .sub-h{
+    font-size: 19px;
+    color:  rgb(4, 58, 4);
+}
 
+.typewriter {
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Noto Sans', sans-serif; 
+  font-size: 15px;
+  color: rgb(39, 36, 36);
+  font-weight: 600;
+}
+/* Animation */
+.typewriter {
+  animation: animated-text 3s steps(30,end) 1s 1 normal both;
+}
+/* text animation */
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
+}
 
 /*
 ====================
@@ -248,6 +308,10 @@ E-market
 
 #cart {
   color: #fff;
+  align-self: center;
+  padding: 30px 0px 0px 0px;
+  margin-left: 40%;
+  margin-right: 40px;
 }
 #message {
   background-color: rgba(0,0,0,0.4);
@@ -261,7 +325,7 @@ input, button{
   border:none; 
   background-color: rgba(0, 0, 0, 0);
   color: #eee;
-  text-decoration: underline;
+  text-decoration: none;
   margin-left: 20px;
 } 
 .popup-gif {
@@ -399,6 +463,28 @@ Loan Calculator
         margin-bottom: 20px;
         font-size: 32px;
     }
+    /*Scheme Detail Page*/
+    .scheme-content{
+        padding:4% 5% 0% 5%;
+    }
+    .scheme-content .text h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    .scheme-content .text .sub-h{
+        font-size: 15px;
+    }
+    /*Scheme Detail Page*/
+    .scheme-content{
+        padding:4% 5% 0% 5%;
+    }
+    .scheme-content .text h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    .scheme-content .text .sub-h{
+        font-size: 15px;
+    }
     /*Loan Calculator*/
     .LoanCalculator{
         padding: 0px 1px 50px 1px;
@@ -413,6 +499,12 @@ Loan Calculator
     .LoanCalculator .content-section{
        font-size: 15px;
     }
+   /*Emarket*/
+   #cart {
+      padding: 22px 0px 0px 0px;
+      font-size: 35px;
+      margin-left: 38px;
+   }
 }
 
 @media only screen and (min-width: 992px) {

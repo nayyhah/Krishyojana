@@ -37,5 +37,6 @@ The technologies used in the project are:
 
 
 
-##  :) _write smthng_
+###  :) Join us, in the *Farm Of Information for Farmers*
+
 
