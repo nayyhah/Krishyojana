@@ -91,7 +91,8 @@
                         </ul>
                         <div class="card-body">
                             <a href="{% url 'profile-detail' post.id %}" class="card-link">View Profile</a>
-                            <a href="{% url 'register' %}" class="card-link">Add to cart</a>
+                            <a href="#" class="card-link popup" onclick="Popup()">Add to cart</a>
+                            <span class="popup-gif" id="pop-gif"><img src="../Images/anigif.gif"></span>
                         </div>
                     </div>
 
@@ -109,7 +110,8 @@
                         </ul>
                         <div class="card-body">
                             <a href="{% url 'profile-detail' post.id %}" class="card-link">View Profile</a>
-                            <a href="{% url 'register' %}" class="card-link">Add to cart</a>
+                            <a href="#" class="card-link popup" onclick="Popup()">Add to cart</a>
+                            <span class="popup-gif" id="pop-gif"><img src="../Images/anigif.gif"></span>
                         </div>
                     </div>
 
@@ -127,7 +129,8 @@
                         </ul>
                         <div class="card-body">
                             <a href="{% url 'profile-detail' post.id %}" class="card-link">View Profile</a>
-                            <a href="{% url 'register' %}" class="card-link">Add to cart</a>
+                            <a href="#" class="card-link popup" onclick="Popup()">Add to cart</a>
+                            <span class="popup-gif" id="pop-gif"><img src="../Images/anigif.gif"></span>
                         </div>
                     </div>
 
@@ -145,7 +148,8 @@
                         </ul>
                         <div class="card-body">
                             <a href="{% url 'profile-detail' post.id %}" class="card-link">View Profile</a>
-                            <a href="{% url 'register' %}" class="card-link">Add to cart</a>
+                            <a href="#" class="card-link popup" onclick="Popup()">Add to cart</a>
+                            <span class="popup-gif" id="pop-gif"><img src="../Images/anigif.gif"></span>
                         </div>
                     </div>
 
@@ -163,7 +167,8 @@
                         </ul>
                         <div class="card-body">
                             <a href="{% url 'profile-detail' post.id %}" class="card-link">View Profile</a>
-                            <a href="{% url 'register' %}" class="card-link">Add to cart</a>
+                            <a href="#" class="card-link popup" onclick="Popup()">Add to cart</a>
+                            <span class="popup-gif" id="pop-gif"><img src="../Images/anigif.gif"></span>
                         </div>
                     </div>
 
@@ -181,7 +186,8 @@
                         </ul>
                         <div class="card-body">
                             <a href="{% url 'profile-detail' post.id %}" class="card-link">View Profile</a>
-                            <a href="{% url 'register' %}" class="card-link">Add to cart</a>
+                            <a href="#" class="card-link popup" onclick="Popup()">Add to cart</a>
+                            <span class="popup-gif" id="pop-gif"><img src="../Images/anigif.gif"></span>
                         </div>
                     </div>
 
@@ -199,7 +205,8 @@
                         </ul>
                         <div class="card-body">
                             <a href="{% url 'profile-detail' post.id %}" class="card-link">View Profile</a>
-                            <a href="{% url 'register' %}" class="card-link">Add to cart</a>
+                            <a href="#" class="card-link popup" onclick="Popup()">Add to cart</a>
+                            <span class="popup-gif" id="pop-gif"><img src="../Images/anigif.gif"></span>
                         </div>
                     </div>
                 </div>
@@ -225,6 +232,17 @@
             function Close() {
                 message = document.getElementById("message");
                 message.style.display = "none";
+            }
+            
+            function Popup() {
+                var gif = document.getElementById("pop-gif");
+                gif.style.display = "block";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == gif) {
+                    gif.style.display = "none";
+                }
             }
         </script>
     </body>
