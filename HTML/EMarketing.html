@@ -66,12 +66,12 @@
                         </li>
                     </ul>
         
-                    <a href="{% url 'login' %}"><button type="button" class="btn btn-outline-primary mx-1">Log In</button></a>
-                    <a href="{% url 'register' %}"><button type="button" class="btn btn-outline-secondary mx-1">Register</button></a>
-                </div>
-            </nav>
-
-            <div id="message">To add new post, login or register <span><input onclick="Close()" class="close-btn" type="Submit" value="close" ></span></div>
+                    <a href="{% url 'post-create' %}"><button type="button" class="btn btn-outline-dark mx-1">New Post</button></a>
+                    <a href="{% url 'profile' %}"><button type="button" class="btn btn-outline-primary mx-1">Profile</button></a>
+                    <a href="{% url 'logout' %}"><button type="button" class="btn btn-outline-secondary mx-1">Logout</button></a>
+             
+                  </nav>
+              
             <!--Content-->
 
             <div class="container">
