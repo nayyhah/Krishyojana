@@ -423,9 +423,6 @@ Loan Calculator
     .navbar-brand {
         font-size: 17px;
     }
-    #navbar .btn {
-    width: 86px;
-    }
     .carousel .carousel-inner {
         /*prevent it from adding a white space between carousel and container elements*/
         height:auto
