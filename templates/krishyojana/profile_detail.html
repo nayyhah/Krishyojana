@@ -1,0 +1,47 @@
+{% extends "krishyojana/base.html" %}
+
+{% load static %}
+
+{% block additional_styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'krishyojana/css/secondary.css' %}">
+  <style>
+        .bg-image{
+            background-image: url( "{% static 'krishyojana/images/bg/users-bg.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;  
+            background-position: top;
+            background-attachment: fixed;
+            border: none;
+        }
+    </style>
+{% endblock additional_styles %}
+
+{% block content %}
+
+	<div class="container">
+      	<div class="content-section pb-5 row bg-image">
+        	<div class="col-md-8">
+          		<div class="media">
+					<img class="rounded-circle account-img" src="{{ object.author.profile.image.url }}">
+					<div class="media-body">
+						<h2 class="account-heading"> {{ object.author.username }}</h2>
+						<p>{{ object.author.first_name }} {{ object.author.last_name }}</p>
+						<p class="text-secondary">{{ object.author.email }}</p>
+	        		</div>
+        		</div>
+        	</div>
+
+            <div class="col-md-4">
+                <div class="content-section">
+                    <h3 style="text-align: center;">Feature</br>Access Point:</h3>
+                    <p class='text-muted'>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="{% url 'user-posts' object.author.username %}">All products</a></li>
+                            <li class="list-group-item"><a href="{% url 'krish-emarket'%}">Back to Krishi-Kshetra</a></li>
+                    </p>
+                </div>
+            </div>
+      	</div>
+    </div>
+
+{% endblock content %}

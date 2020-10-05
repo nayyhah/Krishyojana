@@ -1,0 +1,58 @@
+{% extends "krishyojana/base.html" %}
+
+{% load static %}
+
+{% block additional_styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'krishyojana/css/secondary.css' %}">
+
+  <style>
+        .bg-image{
+            background-image: url( "{% static 'krishyojana/images/bg/schemes-detail-bg.jpg' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+{% endblock additional_styles %}
+
+{% block content %}
+
+    <!-- CONTENT -->
+    <div class="scheme-content">
+
+            <!-- <p> <a href="../Category1.html" style="text-decoration: underline;">Category</a> <span>&rarr;</span> SchemeName </p> -->
+                <div class="text">
+                    <h2><i class="arrow right"></i><i class="arrow right"></i> Livestock insurance Scheme</h2>
+                    <p>This scheme provides protection mechanism to the farmers against any eventual loss of their animals due to death.
+                        <br> <br>
+                        <b class="sub-h">Eligibility Criteria:</b>
+                        <ul>
+                            <li>Farmers belonging to any Indian state are eligible under this scheme.</li>
+                            <li>Farmers must have a Savings Account (or Jan-Dhan Account) .</li>
+                        </ul>
+                        <br>
+                        <b class="sub-h"> Documents required: </b><br>
+                        <ul>
+                            <li>Bank Passbook</li>
+                            <li>Aadhar Card</li>
+                        </ul>
+                        <br>
+                        <b class="sub-h">Toll-Free Helpline Number:</b><br>
+                        <ul>
+                            <li>Number : 016-23389875</li>
+                            <li>Email: livestock-dadf@gov.in</a></li>
+                        </ul> 
+                    </p>
+                    <p class="typewriter">
+                        <b class="sub-h">Registration Website: </b> 
+                        <a href="http://dadf.gov.in/related-links/livestock-insurance">http://dadf.gov.in/livestock-insurance</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    
+          
+{% endblock content %}

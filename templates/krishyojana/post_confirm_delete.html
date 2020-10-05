@@ -1,0 +1,36 @@
+{% extends "krishyojana/base.html" %}
+
+{% load static %}
+
+{% block additional_styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'krishyojana/css/secondary.css' %}">
+  <style>
+        .bg-image{
+            background-image: url( "{% static 'krishyojana/images/bg/users-bg.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;  
+            background-position: top;
+            background-attachment: fixed;
+            border: none;
+        }
+    </style>
+{% endblock additional_styles %}
+
+{% block content %}
+    
+    <!-- Confirm Delete Post -->
+    <div class="content-section  col-sm-6 bg-image">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Delete Post</legend>
+                <h2>Are you sure you want to delete the post "{{ object.crop_name }}"?</h2>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-danger" type="submit">Yes, delete</button>
+                <a href="{% url 'krish-emarket' %}" class="btn btn-outline-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+{% endblock content %}
