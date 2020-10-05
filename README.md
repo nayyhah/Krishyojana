@@ -37,6 +37,7 @@ The technologies used in the project are:
 
 
 
-###  :) Join us, in the *Farm Of Information for Farmers*
+###  :) Visit The Website
+ > [krishyojana](http://ieee-hackathon.herokuapp.com/krishyojana/)
 
 
