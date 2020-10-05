@@ -1,7 +1,9 @@
 # Krishyojana 
 Krishyojana is a web-app providing easy access to the necessary details about the various Schemes by the Government of India for the farmers. It is a platform aiming to provide the details in a well-organised and easy-to-find manner in order to help the farmer get the right details without being confused.
 
-
+###  :) Visit The Website
+ > [krishyojana](http://ieee-hackathon.herokuapp.com/krishyojana/)
+ 
 **Project Submitted for:** SheHacks Hackathon
 
 **Organised by:** IEEE CIS Chapter, G H Raisoni College of Engineering, Nagpur
@@ -35,9 +37,5 @@ The technologies used in the project are:
 -	Javascript
 -	Django Framework
 
-
-
-###  :) Visit The Website
- > [krishyojana](http://ieee-hackathon.herokuapp.com/krishyojana/)
 
 
