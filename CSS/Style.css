@@ -243,6 +243,7 @@ Scheme Detail Page
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    padding-bottom: 33px;
 }
 .scheme-content{
     padding:3% 10% 0% 12%;
@@ -274,7 +275,7 @@ Scheme Detail Page
   white-space: nowrap;
   overflow: hidden;    
   font-family: 'Noto Sans', sans-serif; 
-  font-size: 15px;
+  font-size: 16px;
   color: rgb(39, 36, 36);
   font-weight: 600;
 }
@@ -459,28 +460,29 @@ Loan Calculator
         margin-bottom: 20px;
         font-size: 32px;
     }
+	
     /*Scheme Detail Page*/
     .scheme-content{
         padding:4% 5% 0% 5%;
+        font-size: 15.5px;
     }
     .scheme-content .text h2{
-        font-size: 20px;
+        padding-top: 10px;
+        font-size: 23px;
         text-align: center;
     }
     .scheme-content .text .sub-h{
         font-size: 15px;
     }
-    /*Scheme Detail Page*/
-    .scheme-content{
-        padding:4% 5% 0% 5%;
+    .scheme-content .text .arrow {
+        border-width: 0 2.5px 2.5px 0;
+        padding: 3.5px;
+        margin-bottom: 4px;
     }
-    .scheme-content .text h2{
-        font-size: 20px;
-        text-align: center;
+    .typewriter {   
+        font-size: 15.5px;
     }
-    .scheme-content .text .sub-h{
-        font-size: 15px;
-    }
+	
     /*Loan Calculator*/
     .LoanCalculator{
         padding: 0px 1px 50px 1px;
