@@ -1,0 +1,172 @@
+{% extends "krishyojana/base.html" %}
+
+{% load static %}
+
+{% block additional_styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'krishyojana/css/secondary.css' %}">
+
+  <style>
+        .bg-image{
+            background-image: url( "{% static 'krishyojana/images/bg/msp-bg.jpg' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+{% endblock additional_styles %}
+
+{% block content %}
+
+    <!-- CONTENT -->
+        <div class="msp-content">
+            <h2 class="c" >Minimum Support Prices (MSPs)</h2> 
+            <p>MSP is the guaranteed ‘minimum floor price’ that farmer must get from the government in case the market price of the crops falls below the MSP.
+            <br>
+            <span style="font-weight: 500; font-style: oblique;">*Projected Crop:</span> Avg amount of money required to produce one quintal of a given crop.
+            </p>
+           
+            <h3 class="c" style="padding-bottom: 6px ;">for Kharif Marketing Season (KMS) 2020-21</h3>
+            <table class="table table-bordered table-hover tab">
+                
+                <thead>
+                    <tr class="table" style="background:rgb(129, 173, 129);">
+                        <th scope="col" class="t-c">Crops</th>
+                        <th scope="col" class="c">Projected Cost KMS 2020-21 (Rs/q)</th>
+                        <th scope="col" class="c">MSP (Rs/q)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Paddy (Common)</th>
+                           <td class="c">1,245</td>
+                           <td class="c">1,868</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Paddy (Grade A)</th>
+                           <td class="c">   -   </td>
+                           <td class="c">1,888</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Jowar (Hybrid)</th>
+                           <td class="c">1,746</td>
+                           <td class="c" class="c">2,620</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Jowar (Maldandi)</th>
+                           <td class="c"> - </td>
+                           <td class="c">2,640</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Bajra</th>
+                           <td class="c">1,175</td>
+                           <td class="c">2,150</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ragi</th>
+                           <td class="c">2,194</td>
+                           <td class="c">3,295</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Maize</th>
+                           <td class="c">1,213</td>
+                           <td class="c">1,850</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tur (Arhar)</th>
+                           <td class="c">3,796</td>
+                           <td class="c">6,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Moong</th>
+                           <td class="c">4,797</td>
+                           <td class="c">7,196</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Urad</th>
+                           <td class="c">3,660</td>
+                           <td class="c">6,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Groundnut</th>
+                           <td class="c">3,515</td>
+                           <td class="c">5,275</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sunflower Seed</th>
+                           <td class="c">3,921</td>
+                           <td class="c">5,885</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Soybean (yellow)</th>
+                           <td class="c">2,587</td>
+                           <td class="c">3,880</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Sesamum</th>
+                           <td class="c">4,570</td>
+                           <td class="c">6,855</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Nigerseed</th>
+                           <td class="c">4,462</td>
+                           <td class="c">6,695</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cotton (Medium Staple)</th>
+                           <td class="c">3,676</td>
+                           <td class="c">5,515</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Cotton (Long Staple)</th>
+                           <td class="c"> - </td>
+                           <td class="c">5,825</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <h3 class="c" style="padding-bottom: 6px ;">for Rabi Marketing Season (RMS) 2020-21</h3>
+            <table class="table table-bordered table-hover tab">
+                
+                <thead>
+                    <tr class="table" style="background:rgb(129, 173, 129)">
+                        <th scope="col" >Crops</th>
+                        <th scope="col" class="c">Projected Cost RMS 2020-21 (Rs/q)</th>
+                        <th scope="col" class="c">MSP (Rs/q)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Wheat</th>
+                           <td class="c">923</td>
+                           <td class="c">1,925</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Barley</th>
+                           <td class="c">919</td>
+                           <td class="c">1,525</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Gram</th>
+                           <td class="c">2,801</td>
+                           <td class="c">4,875</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Lentil</th>
+                           <td class="c">2,727</td>
+                           <td class="c">4,800</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Rapeseed & Mustard</th>
+                           <td class="c">2,323</td>
+                           <td class="c">4,425</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Safflower</th>
+                           <td class="c">3,470</td>
+                           <td class="c">5,215</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+          
+{% endblock content %}

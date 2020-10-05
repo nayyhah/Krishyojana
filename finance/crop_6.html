@@ -1,0 +1,54 @@
+{% extends "krishyojana/base.html" %}
+
+{% load static %}
+
+{% block additional_styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'krishyojana/css/secondary.css' %}">
+
+  <style>
+        .bg-image{
+            background-image: url( "{% static 'krishyojana/images/bg/schemes-detail-bg.jpg' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+{% endblock additional_styles %}
+
+{% block content %}
+
+    <!-- Body Content -->
+            <div class="scheme-content">
+
+            <!-- <p> <a href="../Category1.html" style="text-decoration: underline;">Category</a> <span>&rarr;</span> SchemeName </p> -->
+                <div class="text">
+                    <h2><i class="arrow right"></i><i class="arrow right"></i> Neem Coated Urea Scheme</h2>
+                    <p>To boost the growth of wheat and paddy, and reduce the black marketeering and hoarding or urea.
+
+
+                        <br> <br>
+                        <b class="sub-h">Eligibility Criteria:</b>
+                        <ul>
+                            Neem coating leads to more gradual release of urea, helping plants gain more nutrient and resulting in higher yields.
+                            <li>Neem coating leads to more gradual release of urea, helping plants gain more nutrient and resulting in higher yields.</li>
+                            <li>Lower underground water contamination due to leaching of urea.</li>
+                            <li>Neem serves as a natural insecticide</li>
+                            <li>Collection of neem seeds is needed for manufacturing of neem coated urea.</li>
+                        </ul>
+                        <br>
+                        <b class="sub-h">Toll-Free Helpline Number:</b><br>
+                        <ul>
+                            <li>Number : 011-24360066 </li>
+                            <li>Email: customercare@nfl.co.in</li>
+                        </ul> 
+                    </p>
+                    <p class="typewriter">
+                        <b class="sub-h">Website: </b> 
+                        <a href="https://www.nationalfertilizers.com/index.php?option=com_content&view=article&id=139&Itemid=158&lang=en">nationalfertilizers.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+          
+{% endblock content %}

@@ -1,0 +1,75 @@
+{% extends "krishyojana/base.html" %}
+
+{% load static %}
+
+{% block additional_styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'krishyojana/css/secondary.css' %}"><style>
+        .bg-image{
+            background-image: url( "{% static 'krishyojana/images/bg/cart-bg.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;  
+            background-position: top;
+            background-attachment: fixed;
+        }
+    </style>
+{% endblock additional_styles %}
+
+{% block content %}
+
+    <div class="container">
+
+        <h1 class="mt-5" style="color: #fff;">Products by {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h1>
+        <div class="pt-5 row">
+
+            {% for post in posts %}
+                <div class="card ml-xs-5 mr-xs-5 col-sm-5 m-3 ml-lg-5" style="max-width: 300px">
+                    <img src="{{ post.image.url }}" class="card-img-top pt-3" alt="crop-image" style="max-height: 200px">
+                    <div class="card-body pb-0">
+                        <p>
+                        <span class="card-title name pt-1 pl-1 pr-1">Crop: {{ post.crop_name }}</span></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item p-2"><img class="rounded-circle account-img-small" src="{{ post.author.profile.image.url }}">Producer: {{ post.author }}</li>
+                        <li class="list-group-item">Rate: &#8377; {{ post.rate }} /kg ; Amount left: {{ post.amount_left }}kg</li>
+                        <li class="list-group-item">Harvested in: {{ post.harvest_time }}</li>
+                        <li class="list-group-item text-muted">Posted on: {{ post.date_posted|date:"F d, Y" }}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="{% url 'profile-detail' post.id %}" class="card-link">View Profile</a>
+                        {% if request.user.is_authenticated %}
+                            <a href="{% url 'add_to_cart' post.id %}" class="card-link">Add to cart</a>
+                        {% else %}
+                            <a href="{% url 'register' %}" class="card-link">Add to cart</a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% if is_paginated %}
+
+            {% if page_obj.has_previous %}
+                <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+
+                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                    <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+
+                {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+            {% endif %}
+
+        {% endif %}
+
+    </div>
+          
+{% endblock content %}
+    

@@ -1,0 +1,88 @@
+{% extends "krishyojana/base.html" %}
+
+{% load static %}
+
+{% block additional_styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'krishyojana/css/secondary.css' %}">
+    <script type="text/javascript" src="{% static 'krishyojana/js/base.js' %}"></script>
+    <style>
+        .bg-image{
+            background-image: url( "{% static 'krishyojana/images/bg/loan_calc-bg.jpg' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+
+{% endblock additional_styles %}
+
+{% block content %}
+
+    <div class="LoanCalculator">
+        <div class="container">
+
+            <h2><i class="fa fa-calculator" aria-hidden="true"></i>Loan Calculator</h2>
+
+            <div class="content-section">
+                <div class="content-section pb-5 row">
+                    <div id="form" class="center">
+                        <div id="form-src">
+                            <form name="loan_form">
+                                <table class="form-group">
+                                    <tr>
+                                        <td><label>Loan Amount:</label></td>
+                                        <td><input class="form-control" type="text" name="loan_amt" size="10"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><label>Number of months:</label></td>
+                                        <td><input class="form-control" type="text" name="months" size="10"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><label>Annual Interest Rate (in %):<br><span>(Example: 4.5% = 4.5)</span></label></td>
+                                        <td><input class="form-control" type="text" name="rate" size="10"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><label>Extra Monthly Payment:</label></td>
+                                        <td><input class="form-control" type="text" name="extra" size="10" value="0"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="pt-3"><input class="btn btn-outline-primary" type="button" onclick="validate()" value="Calculate"/></td>
+                                        <td class="pt-3"><input class="btn btn-outline-primary" type="button" onclick="startOver()" value="Start Over"></td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="loan-details">
+                        <div class="content-section" id="loan-info">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section" id="info-table">
+                    <div id="table-header">
+                            <table class="table table-responsive-sm">
+                                <tr>
+                                    <td>Payment<br>No.</td>
+                                    <td>Payment</td>
+                                    <td>Principle</td>
+                                    <td>Interest</td>
+                                    <td>Interest Paid</td>
+                                    <td>Balance</td>
+                                </tr>
+                            </table>
+                         </div>
+                         <div id="table">
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+     </div>
+{% endblock content %}
+    

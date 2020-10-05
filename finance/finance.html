@@ -1,0 +1,63 @@
+{% extends "krishyojana/base.html" %}
+
+{% load static %}
+
+{% block additional_styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'krishyojana/css/secondary.css' %}">
+
+  <style>
+        .bg-image{
+            background-image: url( "{% static 'krishyojana/images/bg/schemes-bg.jpg' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        @media(max-width:763px) {
+            .bg-image {
+                background-image: url( "{% static 'krishyojana/images/bg/schemes-phn-bg.jpg' %}");
+            }
+        }
+    </style>
+{% endblock additional_styles %}
+
+{% block content %}
+
+    <!-- CONTENT -->
+    <div class="schemes-content">
+                <h2>Financial Support Schemes</h2>
+                <div class="card ">
+                    <div class="card-body">
+                        <h5 class="card-title">PM-Kisan Samman Nidhi Yojana</h5>
+                        <p class="card-text">Farmers with less than two hectares of landholding will get up to Rs. 6,000 per year as a minimum income support.</p>
+                        <a href="{% url 'finance_1' %}">Read More <i class="arrow right"></i><i class="arrow right"></i></a>
+                    </div>
+                </div>
+               <br>
+               <div class="card ">
+                    <div class="card-body">
+                        <h5 class="card-title">Neem Coated Urea Scheme </h5>
+                        <p class="card-text">To boost the growth of wheat and paddy, and reduce the black marketeering and hoarding or urea.</p>
+                        <a href="{% url 'crop_6' %}">Read More <i class="arrow right"></i><i class="arrow right"></i></a>
+                    </div>
+                </div>
+                <br>
+               <div class="card ">
+                    <div class="card-body">
+                        <h5 class="card-title">Paramparagat Krishi Vikas Yojana (PKVY)</h5>
+                        <p class="card-text">Financial aid of Rs. 50,000 per hectare/ three years is allowed, out of which Rs. 31,000 (61 percent) is given to the farmer directly.</p>
+                        <a href="{% url 'crop_1' %}">Read More <i class="arrow right"></i><i class="arrow right"></i></a>
+                    </div>
+                </div>
+               <br>
+               <div class="card ">
+                    <div class="card-body">
+                        <h5 class="card-title">Micro Irrigation Fund (MIF)</h5>
+                        <p class="card-text">Provide states with concessional rate of interest on required amount in order to promote micro-irrigation.</p>
+                        <a href="{% url 'crop_3' %}">Read More <i class="arrow right"></i><i class="arrow right"></i></a>
+                    </div>
+                </div>
+                <br>
+        </div>
+          
+{% endblock content %}
