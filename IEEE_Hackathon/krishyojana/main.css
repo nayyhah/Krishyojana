@@ -1,0 +1,99 @@
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+/*
+====================
+Navbar
+====================
+*/
+html,body{
+    height: 100%;
+}
+body{
+    margin: 0px;
+}
+.navbar-custom {
+	background-color: #E3F2FD;
+	background-image: url("../images/bg.png");
+	background-repeat: no-repeat;
+    background-size:cover;
+	border-bottom: 1px solid #F5BB83;
+}
+.navbar-brand img{
+    padding-right: 10px;
+    width: 145px;
+    height: 48px;
+}
+.nav-link {
+    color: rgb(3, 122, 3);
+    font-size: 20px;
+    font-weight: 450;
+}
+.nav-item a:hover {
+	color: rgb(54, 52, 52);
+    font-weight: 470;
+}
+.active a {
+	color: #000;
+}
+
+/* Login, register, etc buttons */
+.btn {
+    height: 37px;
+    font-size: 18px;
+    box-sizing: border-box;
+    outline: none;
+}
+.btn:focus {
+    -webkit-box-shadow: 0px 0px 4px #4195fc;
+       -moz-box-shadow: 0px 0px 4px #4195fc;
+            box-shadow: 0px 0px 4px #4195fc;
+}
+
+/*mobile view*/
+@media(max-width:763px) {
+    .Logo .TeamName{
+        font-size: 24px;
+    }
+    .navbar-brand {
+        font-size: 17px;
+    }
+}
+
+
+
+/*
+====================
+Footer
+====================
+*/
+footer {
+    background-color: #E3F2FD;
+    background-image: url("../images/footerbg.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-top: 1px solid #F5BB83;
+    text-align: center;
+    position: relative;
+    height: -100px;
+    padding: 10px;
+    line-height: 11px;
+}
+.Logo .TeamName{
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    margin: 0px 0px 0px 0px;
+    position: relative;
+    top:6px;
+}
+.Logo img{
+    position: relative;
+    top:-1px;
+    width: 32px;
+    height: 30px;
+}
+.copyright {
+    color: rgb(214, 212, 212);
+    padding: 3px;
+    top:3px;
+}

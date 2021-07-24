@@ -1,0 +1,73 @@
+{% extends "krishyojana/base.html" %}
+
+{% load static %}
+
+{% block additional_styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'krishyojana/css/secondary.css' %}">
+{% endblock additional_styles %}
+
+{% block content %}
+
+    <div class="container">
+
+        <h1 class="mt-5">Products by {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h1>
+        <div class="pt-5 row">
+
+            {% for post in posts %}
+                <div class="card col-sm-5 m-3 ml-md-5">
+                    <img src="{% static 'krishyojana/images/emarket.jpg' %}" class="card-img-top pt-3" alt="...">
+                    <div class="card-body pb-0">
+                        <p>
+                        <span class="card-title name">Crop: {{ post.crop_name }}</span></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Producer: {{ post.author }}<img class="rounded-circle account-img-small" src="{{ post.author.profile.image.url }}"></li>
+                        <li class="list-group-item">Rate: &#8377; {{ post.rate }} /kg</li>
+                        <li class="list-group-item">Harvested in: {{ post.harvest_time }}</li>
+                        <li class="list-group-item">Amount left: {{ post.amount_left }}kg</li>
+                        <li class="list-group-item text-muted">Posted on: {{ post.date_posted|date:"F d, Y" }}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="{% url 'profile-detail' post.id %}" class="card-link">View Profile</a>
+                        <a href="#" class="card-link">Add to cart</a>
+                    </div>
+
+                    {% if post.author == user %}
+
+                        <div class="card-body">
+                            <a href="{% url 'post-update' post.id %}" class="btn btn-outline-info">Update</a>
+                            <a href="{% url 'post-delete' post.id %}" class="btn btn-outline-danger">Delete</a>
+                        </div>
+
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        {% if is_paginated %}
+
+            {% if page_obj.has_previous %}
+                <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+
+                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                    <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+
+                {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+            {% endif %}
+
+        {% endif %}
+
+    </div>
+          
+{% endblock content %}
+    

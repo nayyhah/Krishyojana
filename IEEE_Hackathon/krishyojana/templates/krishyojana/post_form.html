@@ -1,0 +1,26 @@
+{% extends "krishyojana/base.html" %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block additional_styles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'krishyojana/css/secondary.css' %}">
+{% endblock additional_styles %}
+
+{% block content %}
+    
+    <!-- Registration Form -->
+    <div class="content-section  col-sm-6">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">New Post</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+
+{% endblock content %}

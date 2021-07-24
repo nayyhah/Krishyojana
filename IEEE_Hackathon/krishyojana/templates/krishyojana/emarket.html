@@ -1,0 +1,108 @@
+{% extends "krishyojana/base.html" %}
+
+{% load static %}
+
+{% block additional_styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'krishyojana/css/secondary.css' %}">
+    <style>
+        .bg-image{
+            background-image: url( "{% static 'krishyojana/images/emarket-Copy.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;  
+            background-position: top;
+            background-attachment: fixed;
+        }
+    </style>
+
+{% endblock additional_styles %}
+
+{% block content %}
+
+    <div class="container">
+        <h1 id="cart">Krishi-Kshetra</h1>
+        <div class="pt-5 row">
+
+            {% for post in posts %}
+                <div class="card ml-xs-5 mr-xs-5 col-sm-5 m-3 ml-lg-5" style="max-width: 300px">
+
+
+                <!-- ~~~~~~~~added part~~~~~~~~ -->
+                    {% if post.crop_name == 'Tomato' %}
+                        <img src="{% static 'krishyojana/images/tomato.jpg %}" class="card-img-top pt-3" alt="tomato" style="max-height: 200px" >
+                    {% else if post.crop_name == 'Potato' %}
+                        <img src="{% static 'krishyojana/images/potato.jpg %}" class="card-img-top pt-3" alt="potato" style="max-height: 200px" >
+                    {% else if post.crop_name == 'Wheat' %}
+                        <img src="{% static 'krishyojana/images/wheat.jpg %}" class="card-img-top pt-3" alt="wheat" style="max-height: 200px" >
+                    {% else if post.crop_name == 'Corn' %}
+                        <img src="{% static 'krishyojana/images/corn.jpg %}" class="card-img-top pt-3" alt="corn" style="max-height: 200px" >
+                    {% else if post.crop_name == 'Rice' %}
+                        <img src="{% static 'krishyojana/images/rice.jpg %}" class="card-img-top pt-3" alt="rice" style="max-height: 200px" >
+                    {% else if post.crop_name == 'Barley' %}
+                        <img src="{% static 'krishyojana/images/barley.jpg %}" class="card-img-top pt-3" alt="barley" style="max-height: 200px" >
+                    {% else if post.crop_name == 'Soyabean' %}
+                        <img src="{% static 'krishyojana/images/soyabean.jpg %}" class="card-img-top pt-3" alt="soyabean" style="max-height: 200px" >
+                    {% else if post.crop_name == 'Bajra' %}
+                        <img src="{% static 'krishyojana/images/bajra.jpg %}" class="card-img-top pt-3" alt="bajra" style="max-height: 200px" >
+
+                    {% endif %}
+
+                    <!-- ~~~~~~~~ -->
+
+                    <div class="card-body pb-0">
+                        <p>
+                        <span class="card-title name p-1">Crop: {{ post.crop_name }}</span></p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item p-2"><img class="rounded-circle account-img-small" src="{{ post.author.profile.image.url }}">Producer: {{ post.author }}</li>
+                        <li class="list-group-item">Rate: &#8377; {{ post.rate }} /kg ; Amount left: {{ post.amount_left }}kg</li>
+                        <li class="list-group-item">Harvested in: {{ post.harvest_time }}</li>
+                        <li class="list-group-item text-muted">Posted on: {{ post.date_posted|date:"F d, Y" }}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="{% url 'profile-detail' post.id %}" class="card-link">View Profile</a>
+                        {% if request.user.is_authenticated %}
+                            <a href="{% url 'add_to_cart' post.id %}" class="card-link">Add to cart</a>
+                        {% else %}
+                            <a href="{% url 'register' %}" class="card-link">Add to cart</a>
+                        {% endif %}
+                    </div>
+
+                    {% if post.author == user %}
+                        <div class="card-body">
+                            <a href="{% url 'post-update' post.id %}" class="btn btn-outline-info">Update</a>
+                            <a href="{% url 'post-delete' post.id %}" class="btn btn-outline-danger">Delete</a>
+                        </div>
+
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        {% if is_paginated %}
+
+            {% if page_obj.has_previous %}
+                <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+
+                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                    <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+
+                {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+            {% endif %}
+
+        {% endif %}
+
+    </div>
+          
+{% endblock content %}
+    
+
